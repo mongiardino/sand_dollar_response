@@ -1,0 +1,12 @@
+#nexus
+begin sets;
+  charset 16s_no_spur_linsi_untrimmed = 1-672;
+  charset 28s_no_spur_linsi_untrimmed = 673-1905;
+  charset cox1_no_spur_linsi_untrimmed = 1906-3214;
+  charset h3_no_spur_linsi_untrimmed = 3215-3523;
+  charpartition mymodels =
+    TIM2+F+I+G4: 16s_no_spur_linsi_untrimmed,
+    TIM3+F+I+G4: 28s_no_spur_linsi_untrimmed,
+    GTR+F+R3: cox1_no_spur_linsi_untrimmed,
+    HKY+F+G4: h3_no_spur_linsi_untrimmed;
+end;

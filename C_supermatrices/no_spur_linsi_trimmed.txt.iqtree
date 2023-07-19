@@ -1,0 +1,241 @@
+IQ-TREE 1.6.12 built Aug 15 2019
+
+Partition file name: no_spur_linsi_trimmed.txt
+Input file name: no_spur_linsi_trimmed.phy
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 280065
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 28 taxa with 4 partitions and 3260 total sites (29.5596% missing data)
+
+  ID  Name                        Type	Seq	Site	Unique	Infor	Invar	Const
+   1  16s_no_spur_linsi_trimmed   DNA	24	546	226	192	318	318
+   2  28s_no_spur_linsi_trimmed   DNA	13	1136	137	82	976	976
+   3  cox1_no_spur_linsi_trimmed  DNA	27	1269	533	432	791	791
+   4  h3_no_spur_linsi_trimmed    DNA	7	309	73	62	229	229
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+I+G4:16s_no_spur_linsi_trimmed,TIM3+F+I+G4:28s_no_spur_linsi_trimmed,GTR+F+R3:cox1_no_spur_linsi_trimmed,HKY+F+G4:h3_no_spur_linsi_trimmed
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM2+F+I+G4      -4329.6509   8677.3018 + 0.0000   8677.6377 + 0.0000   8716.0254 + 0.0000
+   2  TIM3+F+I+G4      -2888.5410   5795.0819 + 0.0000   5795.2418 + 0.0000   5840.3994 + 0.0000
+   3  GTR+F+R3        -11177.9268  22381.8537 + 0.0000  22382.1437 + 0.0000  22448.7515 + 0.0000
+   4  HKY+F+G4          -996.4500   2004.9001 + 0.0000   2005.1782 + 0.0000   2027.3001 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM2+F+I+G4    1.1079  TIM2{7.52775,14.0848,37.0451}+F{0.310125,0.19782,0.210716,0.281339}+I{0.464527}+G4{0.706545}
+   2  TIM3+F+I+G4    0.1824  TIM3{0.417873,2.47708,6.96894}+F{0.198084,0.295981,0.349099,0.156835}+I{0.563452}+G4{0.462493}
+   3  GTR+F+R3       1.8034  GTR{3.45012,10.6628,7.62008,0.0001,48.2651}+F{0.267071,0.23136,0.1884,0.313169}+R3{0.627357,0.00605172,0.179132,1.17064,0.193511,4.06439}
+   4  HKY+F+G4       0.5153  HKY{3.24561}+F{0.235486,0.325572,0.261799,0.177142}+G4{0.237244}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -19352.3634 (s.e. 450.6694)
+Unconstrained log-likelihood (without tree): -12255.4184
+Number of free parameters (#branches + #model parameters): 89
+Akaike information criterion (AIC) score: 38882.7269
+Corrected Akaike information criterion (AICc) score: 38887.7805
+Bayesian information criterion (BIC) score: 39424.6908
+
+Total tree length (sum of branch lengths): 2.8303
+Sum of internal branch lengths: 0.9001 (31.8025% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Arachnoides_placenta' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-------------------Arachnoides_placenta
+|
+|                     +--------Astriclypeus_mannii
+|                +----| (100)
+|                |    |  +-------Echinodiscus_bisperforatus
+|                |    +--| (92)
+|                |       +-------Sculpsitechinus_auritus
+|             +--| (53)
+|             |  |                       +------------------Linopneustes_longispinus
+|             |  +-----------------------| (100)
+|             |                          +------------------Maretia_planulata
+|         +---| (54)
+|         |   |                     +--Encope_aberrans
+|         |   |                  +--| (99)
+|         |   |                  |  +--Encope_grandis
+|         |   |               +--| (96)
+|         |   |               |  +------Leodia_sexiesperforata
+|         |   |            +--| (53)
+|         |   |            |  +--------Mellitella_stokesii
+|         |   |         +--| (45)
+|         |   |         |  +-----Lanthonia_longifissa
+|         |   |     +---| (100)
+|         |   |     |   |  +---Mellita_isometra
+|         |   |     |   +--| (96)
+|         |   |     |      +---Mellita_notabilis
+|         |   +-----| (100)
+|         |         |        +------Scaphechinus_mirabilis
+|         |         |     +--| (74)
+|         |         |     |  +-----Echinarachnius_parma
+|         |         |  +--| (51)
+|         |         |  |  +--------Dendraster_excentricus
+|         |         +--| (97)
+|         |            +-------Sinaechinocyamus_mai
+|      +--| (34)
+|      |  |           +--Conolampas_sigsbei
+|      |  |  +--------| (100)
+|      |  |  |        +--Echinolampas_crassa
+|      |  +--| (80)
+|      |     +-------Rhyncholampas_pacificus
+|   +--| (85)
+|   |  +----------------------------------Colobocentrotus_mertensii
++---| (89)
+|   |            +------------------Echinocyamus_pusillus
+|   +------------| (100)
+|                |  +--------------Laganum_fudsiyama
+|                +--| (95)
+|                   |    +---Peronella_lesueri
+|                   +----| (100)
+|                        +----Peronella_japonica
+|
+|               +--Clypeaster_japonicus
+|            +--| (99)
+|            |  +--Clypeaster_virescens
++------------| (100)
+             +------Clypeaster_reticulatus
+
+Tree in newick format:
+
+(Arachnoides_placenta:0.1555153083,((((((Astriclypeus_mannii:0.0686072031,(Echinodiscus_bisperforatus:0.0619975941,Sculpsitechinus_auritus:0.0612634930)92:0.0149637937)100:0.0393251851,(Linopneustes_longispinus:0.1452081947,Maretia_planulata:0.1465116677)100:0.1837039931)53:0.0236561011,((((((Encope_aberrans:0.0173946281,Encope_grandis:0.0248529491)99:0.0108137555,Leodia_sexiesperforata:0.0536728889)96:0.0058682937,Mellitella_stokesii:0.0681801993)53:0.0036505599,Lanthonia_longifissa:0.0464643227)45:0.0024487738,(Mellita_isometra:0.0305482708,Mellita_notabilis:0.0372322524)96:0.0082698573)100:0.0344022096,(((Scaphechinus_mirabilis:0.0537884912,Echinarachnius_parma:0.0519692082)74:0.0054752643,Dendraster_excentricus:0.0711718369)51:0.0054106006,Sinaechinocyamus_mai:0.0626651020)97:0.0180943900)100:0.0481447307)54:0.0318296103,((Conolampas_sigsbei:0.0143407730,Echinolampas_crassa:0.0067203843)100:0.0704036089,Rhyncholampas_pacificus:0.0676719598)80:0.0266744705)34:0.0142922674,Colobocentrotus_mertensii:0.2711638666)85:0.0189161326,(Echinocyamus_pusillus:0.1464682386,(Laganum_fudsiyama:0.1157046380,(Peronella_lesueri:0.0356311213,Peronella_japonica:0.0431242649)100:0.0428194499)95:0.0278764121)100:0.1028785624)89:0.0343191416,((Clypeaster_japonicus:0.0062641348,Clypeaster_virescens:0.0097931645)99:0.0257734092,Clypeaster_reticulatus:0.0562957696)100:0.1001098668);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -19352.363576
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-------------------Arachnoides_placenta
+|
+|                     +--------Astriclypeus_mannii
+|                +----| (100)
+|                |    |  +-------Echinodiscus_bisperforatus
+|                |    +--| (92)
+|                |       +-------Sculpsitechinus_auritus
+|             +--| (53)
+|             |  |                       +------------------Linopneustes_longispinus
+|             |  +-----------------------| (100)
+|             |                          +------------------Maretia_planulata
+|         +---| (54)
+|         |   |                     +--Encope_aberrans
+|         |   |                  +--| (99)
+|         |   |                  |  +--Encope_grandis
+|         |   |               +--| (96)
+|         |   |               |  +------Leodia_sexiesperforata
+|         |   |            +--| (53)
+|         |   |            |  +--------Mellitella_stokesii
+|         |   |         +--| (45)
+|         |   |         |  +-----Lanthonia_longifissa
+|         |   |     +---| (100)
+|         |   |     |   |  +---Mellita_isometra
+|         |   |     |   +--| (96)
+|         |   |     |      +---Mellita_notabilis
+|         |   +-----| (100)
+|         |         |        +------Scaphechinus_mirabilis
+|         |         |     +--| (74)
+|         |         |     |  +-----Echinarachnius_parma
+|         |         |  +--| (51)
+|         |         |  |  +--------Dendraster_excentricus
+|         |         +--| (97)
+|         |            +-------Sinaechinocyamus_mai
+|      +--| (34)
+|      |  |           +--Conolampas_sigsbei
+|      |  |  +--------| (100)
+|      |  |  |        +--Echinolampas_crassa
+|      |  +--| (80)
+|      |     +-------Rhyncholampas_pacificus
+|   +--| (85)
+|   |  +----------------------------------Colobocentrotus_mertensii
++---| (89)
+|   |            +------------------Echinocyamus_pusillus
+|   +------------| (100)
+|                |  +--------------Laganum_fudsiyama
+|                +--| (95)
+|                   |    +---Peronella_lesueri
+|                   +----| (100)
+|                        +----Peronella_japonica
+|
+|               +--Clypeaster_japonicus
+|            +--| (99)
+|            |  +--Clypeaster_virescens
++------------| (100)
+             +------Clypeaster_reticulatus
+
+
+Consensus tree in newick format: 
+
+(Arachnoides_placenta:0.1555002834,((((((Astriclypeus_mannii:0.0685992042,(Echinodiscus_bisperforatus:0.0619920378,Sculpsitechinus_auritus:0.0612597948)92:0.0149672148)100:0.0393194977,(Linopneustes_longispinus:0.1452217640,Maretia_planulata:0.1464964833)100:0.1836611638)53:0.0236604874,((((((Encope_aberrans:0.0173961350,Encope_grandis:0.0248484690)99:0.0108183826,Leodia_sexiesperforata:0.0536675623)96:0.0058669201,Mellitella_stokesii:0.0681733633)53:0.0036504993,Lanthonia_longifissa:0.0464607516)45:0.0024489636,(Mellita_isometra:0.0305449621,Mellita_notabilis:0.0372291001)96:0.0082719086)100:0.0344113726,(((Scaphechinus_mirabilis:0.0537828523,Echinarachnius_parma:0.0519646535)74:0.0054765950,Dendraster_excentricus:0.0711616538)51:0.0054085298,Sinaechinocyamus_mai:0.0626616871)97:0.0181005834)100:0.0481478119)54:0.0318053333,((Conolampas_sigsbei:0.0143375277,Echinolampas_crassa:0.0067228767)100:0.0703888371,Rhyncholampas_pacificus:0.0676695665)80:0.0266771229)34:0.0143121473,Colobocentrotus_mertensii:0.2711522471)85:0.0189028923,(Echinocyamus_pusillus:0.1464352083,(Laganum_fudsiyama:0.1158507982,(Peronella_lesueri:0.0357146882,Peronella_japonica:0.0430420202)100:0.0426298133)95:0.0279356583)100:0.1028342587)89:0.0343199712,((Clypeaster_japonicus:0.0062712593,Clypeaster_virescens:0.0097892862)99:0.0257787814,Clypeaster_reticulatus:0.0562830271)100:0.1001088316);
+
+TIME STAMP
+----------
+
+Date and time: Wed Jul 19 13:10:03 2023
+Total CPU time used: 16.476421 seconds (0h:0m:16s)
+Total wall-clock time used: 19.096421 seconds (0h:0m:19s)
+

@@ -1,0 +1,4 @@
+DNA, 16s_all_linsi_untrimmed = 1-1574
+DNA, 28s_all_linsi_untrimmed = 1575-5376
+DNA, cox1_all_linsi_untrimmed = 5377-6930
+DNA, h3_all_linsi_untrimmed = 6931-8963

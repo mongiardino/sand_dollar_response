@@ -1,0 +1,4 @@
+DNA, 16s_no_spur_linsi_trimmed = 1-546
+DNA, 28s_no_spur_linsi_trimmed = 547-1682
+DNA, cox1_no_spur_linsi_trimmed = 1683-2951
+DNA, h3_no_spur_linsi_trimmed = 2952-3260

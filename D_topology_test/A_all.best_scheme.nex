@@ -1,0 +1,12 @@
+#nexus
+begin sets;
+  charset 16s_all_linsi_trimmed = 1-545;
+  charset 28s_all_linsi_trimmed = 546-1683;
+  charset cox1_all_linsi_trimmed = 1684-2952;
+  charset h3_all_linsi_trimmed = 2953-3261;
+  charpartition mymodels =
+    TIM2+F+I+G4: 16s_all_linsi_trimmed,
+    TIM3+F+I+G4: 28s_all_linsi_trimmed,
+    GTR+F+I+G4: cox1_all_linsi_trimmed,
+    TPM2+F+I: h3_all_linsi_trimmed;
+end;

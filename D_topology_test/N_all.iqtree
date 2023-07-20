@@ -1,0 +1,163 @@
+IQ-TREE 1.6.12 built Aug 15 2019
+
+Partition file name: all_linsi_trimmed.txt
+Input file name: all_linsi_trimmed.phy
+Type of analysis: ModelFinder + tree reconstruction
+Random seed number: 975356
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 29 taxa with 4 partitions and 3261 total sites (28.559% missing data)
+
+  ID  Name                    Type	Seq	Site	Unique	Infor	Invar	Const
+   1  16s_all_linsi_trimmed   DNA	25	545	236	198	300	300
+   2  28s_all_linsi_trimmed   DNA	14	1138	163	94	952	952
+   3  cox1_all_linsi_trimmed  DNA	28	1269	549	445	775	775
+   4  h3_all_linsi_trimmed    DNA	8	309	88	65	219	219
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: TIM2+F+I+G4:16s_all_linsi_trimmed,TIM3+F+I+G4:28s_all_linsi_trimmed,GTR+F+I+G4:cox1_all_linsi_trimmed,TPM2u+F+I:h3_all_linsi_trimmed
+
+List of best-fit models per partition:
+
+  ID  Model             LogL          AIC      w-AIC      AICc     w-AICc       BIC      w-BIC
+   1  TIM2+F+I+G4      -4622.2832   9262.5663 + 0.0000   9262.9028 + 0.0000   9301.2734 + 0.0000
+   2  TIM3+F+I+G4      -3160.0746   6338.1493 + 0.0000   6338.3089 + 0.0000   6383.4825 + 0.0000
+   3  GTR+F+I+G4      -11796.0882  23614.1764 + 0.0000  23614.3864 + 0.0000  23670.7822 + 0.0000
+   4  TPM2u+F+I        -1138.1920   2290.3841 + 0.0000   2290.7561 + 0.0000   2316.5174 + 0.0000
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  TIM2+F+I+G4    1.0835  TIM2{5.21407,10.5034,26.6798}+F{0.30981,0.197461,0.211781,0.280948}+I{0.410297}+G4{0.64287}
+   2  TIM3+F+I+G4    0.1830  TIM3{0.388571,2.0377,6.73001}+F{0.197713,0.29649,0.349053,0.156744}+I{0.6024}+G4{0.649725}
+   3  GTR+F+I+G4     1.8114  GTR{3.19389,10.3889,7.62843,0.0001,51.0863}+F{0.265781,0.231373,0.189044,0.313802}+I{0.579563}+G4{1.16773}
+   4  TPM2u+F+I      0.5294  TPM2u{2.62757,5.92974}+F{0.238156,0.324154,0.261844,0.175846}+I{0.661818}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -20677.8159 (s.e. 473.8536)
+Unconstrained log-likelihood (without tree): -12654.0622
+Number of free parameters (#branches + #model parameters): 90
+Akaike information criterion (AIC) score: 41535.6319
+Corrected Akaike information criterion (AICc) score: 41540.7991
+Bayesian information criterion (BIC) score: 42083.7129
+
+Total tree length (sum of branch lengths): 3.1697
+Sum of internal branch lengths: 1.0510 (33.1589% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Arachnoides_placenta' is drawn at root
+
++-----------------Arachnoides_placenta
+|
+|                   +------Astriclypeus_mannii
+|             +-----|
+|             |     |  +------Echinodiscus_bisperforatus
+|             |     +--|
+|             |        +-----Sculpsitechinus_auritus
+|          +--|
+|          |  |                   +--Encope_aberrans
+|          |  |                +--|
+|          |  |                |  +--Encope_grandis
+|          |  |             +--|
+|          |  |             |  +-----Leodia_sexiesperforata
+|          |  |          +--|
+|          |  |          |  +------Mellitella_stokesii
+|          |  |       +--|
+|          |  |       |  +----Lanthonia_longifissa
+|          |  |    +--|
+|          |  |    |  |  +--Mellita_isometra
+|          |  |    |  +--|
+|          |  |    |     +---Mellita_notabilis
+|          |  +----|
+|          |       |        +-----Scaphechinus_mirabilis
+|          |       |     +--|
+|          |       |     |  +----Echinarachnius_parma
+|          |       |  +--|
+|          |       |  |  +-------Dendraster_excentricus
+|          |       +--|
+|          |          +------Sinaechinocyamus_mai
+|       +--|
+|       |  |            +---------------Echinocyamus_pusillus
+|       |  +------------|
+|       |               |  +-----------Laganum_fudsiyama
+|       |               +--|
+|       |                  |    +--Peronella_lesueri
+|       |                  +----|
+|       |                       +----Peronella_japonica
+|    +--|
+|    |  |               +------------Colobocentrotus_mertensii
+|    |  |     +---------|
+|    |  |     |         +-----------------------------------Strongylocentrotus_purpuratus
+|    |  +-----|
+|    |        |                +-----------Linopneustes_longispinus
+|    |        +----------------|
+|    |                         +------------------Maretia_planulata
++----|
+|    |          +--Conolampas_sigsbei
+|    |  +-------|
+|    |  |       +--Echinolampas_crassa
+|    +--|
+|       +------Rhyncholampas_pacificus
+|
+|            +--Clypeaster_japonicus
+|         +--|
+|         |  +--Clypeaster_virescens
++---------|
+          +-----Clypeaster_reticulatus
+
+Tree in newick format:
+
+(Arachnoides_placenta:0.1619583621,(((((Astriclypeus_mannii:0.0706073322,(Echinodiscus_bisperforatus:0.0641306398,Sculpsitechinus_auritus:0.0610370640):0.0135308223):0.0599915998,((((((Encope_aberrans:0.0171121812,Encope_grandis:0.0253896787):0.0108427000,Leodia_sexiesperforata:0.0552015316):0.0061049698,Mellitella_stokesii:0.0695372071):0.0036860772,Lanthonia_longifissa:0.0471624817):0.0025915414,(Mellita_isometra:0.0314816145,Mellita_notabilis:0.0378678562):0.0083985317):0.0353257830,(((Scaphechinus_mirabilis:0.0549159350,Echinarachnius_parma:0.0518393250):0.0055213489,Dendraster_excentricus:0.0719753567):0.0057756059,Sinaechinocyamus_mai:0.0650016742):0.0170777604):0.0506150281):0.0348340451,(Echinocyamus_pusillus:0.1431548985,(Laganum_fudsiyama:0.1155853178,(Peronella_lesueri:0.0325417940,Peronella_japonica:0.0453021096):0.0484379520):0.0298571805):0.1179429804):0.0128958863,((Colobocentrotus_mertensii:0.1237884778,Strongylocentrotus_purpuratus:0.3252870720):0.0903878720,(Linopneustes_longispinus:0.1128644906,Maretia_planulata:0.1701843800):0.1602470241):0.0598708126):0.0101437395,((Conolampas_sigsbei:0.0142320584,Echinolampas_crassa:0.0067979510):0.0736418494,Rhyncholampas_pacificus:0.0708353395):0.0270262545):0.0489312753,((Clypeaster_japonicus:0.0063580128,Clypeaster_virescens:0.0096142084):0.0266049647,Clypeaster_reticulatus:0.0568806387):0.0907431089);
+
+TIME STAMP
+----------
+
+Date and time: Wed Jul 19 13:58:18 2023
+Total CPU time used: 14.8179 seconds (0h:0m:14s)
+Total wall-clock time used: 15.7175 seconds (0h:0m:15s)
+

@@ -2,12 +2,22 @@
 #'Embracing the taxonomic and topological stability of phylogenomics' (2023)
 #Sci. Rep.
 
-#modify the working directory to the location of this file. All directory
+#Modify the working directory to the location of this file. All directory
 #changes are made relative to this folder, and the structure of the data is
-#assumed to be as in the GitHub repository
+#assumed to be as in the GitHub repository.
+
+#The code can build all files used for inference, as well as report the settings
+#used for inference in IQ-TREE. As such, it only needs the files present in
+#A_sequences_NCBI and E_transcriptomes, all other files can be either generated
+#by this script, or obtained running them in IQ-TREE. Other folders can be
+#created and populated using this code. However, results of running all analyses
+#are also provided.
+
 setwd('')
 
 rm(list=ls())
+
+#if the following packages are not installed, please do so before loading
 library(phangorn)
 library(tidyverse)
 library(combinat)
@@ -187,14 +197,14 @@ for(n in 1:length(types)) {
 
 #print commands used to infer trees with iqtree2:
 commands = paste('iqtree -s', list.files('../C_supermatrices', pattern = '.phy'), 
-                 '-st DNA -spp', list.files('../C_supermatrices', pattern = '.txt'), 
+                 '-st DNA -spp', list.files('../C_supermatrices', pattern = '.txt$'), 
                  '-m MFP+MERGE -bb 1000')
 commands
 
 #STEP 4: topology testing-------------------------------------------------------
 rm(list=ls())
-dir.create('./D_topology_test')
-setwd('./D_topology_test')
+dir.create('../D_topology_test')
+setwd('../D_topology_test')
 
 #copy trimmed alignment with S. purpuratus
 file.copy('../C_supermatrices/all_linsi_trimmed.phy', 
@@ -310,7 +320,7 @@ for(i in 1:length(all_trees_text)) {
 
 #generate commands for constrained tree search
 alignments = sort(list.files(pattern = 'phy'))
-tree_files = sort(list.files(pattern = 'tre'))
+tree_files = sort(list.files(pattern = 'tre$'))
 tree_files = tree_files[grep(paste0(paste0(LETTERS[1:length(all_trees)], '_'), 
                                     collapse = '|'), tree_files)]
 
@@ -449,3 +459,4 @@ data.frame(type = names(table(liks$who_wins)), values = as.numeric(table(liks$wh
   ggplot(aes(x = '', y = values, fill = type)) + geom_bar(stat = 'identity', width = 1) + 
   coord_polar('y', start = 0) + scale_fill_manual(values=met.brewer("Demuth", n=5)[c(2,3,4)]) + 
   theme_bw() + theme(legend.position = "none")
+                               

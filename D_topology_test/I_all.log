@@ -1,0 +1,181 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    tscc-4-5.sdsc.edu (AVX512, FMA3, 187 GB RAM)
+Command: iqtree -s all_linsi_trimmed.phy -st DNA -spp all_linsi_trimmed.txt -m MFP+MERGE -g I_all_trees_supermatrix.tre -pre I_all
+Seed:    955951 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Jul 19 13:42:27 2023
+Kernel:  AVX+FMA - 1 threads (36 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 36 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading partition model file all_linsi_trimmed.txt ...
+Reading alignment file all_linsi_trimmed.phy ... Phylip format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 29 sequences with 3261 columns, 1036 distinct patterns
+802 parsimony-informative, 213 singleton sites, 2246 constant sites
+                               Gap/Ambiguity  Composition  p-value
+   1  Arachnoides_placenta            44.59%    failed      0.00%
+   2  Astriclypeus_mannii             34.99%    failed      0.22%
+   3  Clypeaster_japonicus            44.53%    failed      0.00%
+   4  Clypeaster_reticulatus           4.08%    failed      0.04%
+   5  Clypeaster_virescens            37.32%    failed      0.21%
+   6  Colobocentrotus_mertensii       44.56%    passed     25.71%
+   7  Conolampas_sigsbei              25.76%    failed      0.00%
+   8  Dendraster_excentricus          79.82%    failed      0.08%
+   9  Echinarachnius_parma            74.21%    failed      0.00%
+  10  Echinocyamus_pusillus           28.33%    failed      0.04%
+  11  Echinodiscus_bisperforatus       9.81%    passed     14.95%
+  12  Echinolampas_crassa             83.35%    failed      3.99%
+  13  Encope_aberrans                  9.54%    failed      4.38%
+  14  Encope_grandis                  11.01%    failed      1.85%
+  15  Laganum_fudsiyama               35.02%    failed      0.00%
+  16  Lanthonia_longifissa            11.01%    failed      3.18%
+  17  Leodia_sexiesperforata           9.54%    failed      1.99%
+  18  Linopneustes_longispinus        28.55%    failed      0.00%
+  19  Maretia_planulata               44.56%    failed      0.03%
+  20  Mellita_isometra                11.07%    failed      3.16%
+  21  Mellita_notabilis               11.01%    passed     12.59%
+  22  Mellitella_stokesii              9.57%    passed     27.32%
+  23  Peronella_japonica              79.30%    failed      0.01%
+  24  Peronella_lesueri               35.05%    failed      0.00%
+  25  Rhyncholampas_pacificus         79.82%    failed      0.00%
+  26  Scaphechinus_mirabilis          50.60%    failed      0.00%
+  27  Sculpsitechinus_auritus         39.87%    failed      0.33%
+  28  Sinaechinocyamus_mai             3.53%    passed     12.76%
+  29  Strongylocentrotus_purpuratus    0.61%    failed      0.02%
+WARNING: 6 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                           33.83%  24 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Partition file is not in NEXUS format, assuming RAxML-style partition file...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	DNA	25	545	198	300	GTR+MERGE	16s_all_linsi_trimmed
+2	DNA	14	1138	94	952	GTR+MERGE	28s_all_linsi_trimmed
+3	DNA	28	1269	445	775	GTR+MERGE	cox1_all_linsi_trimmed
+4	DNA	8	309	65	219	GTR+MERGE	h3_all_linsi_trimmed
+Degree of missing data: 0.286
+Info: multi-threading strategy over partitions
+
+Reading constraint tree I_all_trees_supermatrix.tre...
+
+Creating fast initial parsimony tree by random order stepwise addition...
+0.143 seconds, parsimony score: 4215 (based on 1015 sites)
+NOTE: ModelFinder requires 7 MB RAM!
+Testing GTR+F+G on supermatrix...
+GTR+F+G4 / LnL: -21190.501 / df: 64 / AIC: 42509.003 / AICc: 42511.606 / BIC: 42898.749
+Selecting individual models for 4 charsets using BIC...
+ No. Model        Score       Charset
+   1 TIM2+F+I+G4  9297.222    16s_all_linsi_trimmed
+   2 TIM3+F+I+G4  6394.980    28s_all_linsi_trimmed
+   3 GTR+F+G4     23826.857   cox1_all_linsi_trimmed
+   4 TPM2+F+I     2316.658    h3_all_linsi_trimmed
+Full partition model BIC score: 42324.075 (LnL: -20802.042  df:89)
+Merging models to increase model fit (about 13 total partition schemes)...
+   5 GTR+F+I+G4   42635.699   16s_all_linsi_trimmed+28s_all_linsi_trimmed
+   6 GTR+F+I+G4   42200.098   16s_all_linsi_trimmed+cox1_all_linsi_trimmed
+   7 TIM2+F+I+G4  42368.098   16s_all_linsi_trimmed+h3_all_linsi_trimmed
+   8 SYM+I+G4     42621.413   28s_all_linsi_trimmed+cox1_all_linsi_trimmed
+   9 TIM2+F+I+G4  42355.276   28s_all_linsi_trimmed+h3_all_linsi_trimmed
+  10 SYM+G4       42379.972   cox1_all_linsi_trimmed+h3_all_linsi_trimmed	0h:1m:38s (0h:0m:29s left)
+Merging 16s_all_linsi_trimmed+cox1_all_linsi_trimmed with BIC score: 42200.098 (LnL: -20772.413  df: 81)
+  11 SYM+I+G4     42723.490   16s_all_linsi_trimmed+28s_all_linsi_trimmed+cox1_all_linsi_trimmed	0h:2m:11s (0h:0m:23s left)
+  12 GTR+F+I+G4   42285.592   16s_all_linsi_trimmed+cox1_all_linsi_trimmed+h3_all_linsi_trimmed	0h:2m:44s (0h:0m:13s left)
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = GTR+F+I+G4: 16s_all_linsi_trimmed cox1_all_linsi_trimmed, TIM3+F+I+G4: 28s_all_linsi_trimmed, TPM2+F+I: h3_all_linsi_trimmed;
+Agglomerative model selection: ((16s_all_linsi_trimmed,cox1_all_linsi_trimmed)1:42200.1,28s_all_linsi_trimmed,h3_all_linsi_trimmed)
+Merging into 3 partitions...
+Partition information was printed to I_all.best_scheme.nex
+Partition information in Raxml format was printed to I_all.best_scheme
+
+All model information printed to I_all.model.gz
+CPU time for ModelFinder: 163.737 seconds (0h:2m:43s)
+Wall-clock time for ModelFinder: 165.999 seconds (0h:2m:45s)
+
+NOTE: 3 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -22624.366
+Current log-likelihood at step 1: -21214.863
+Current log-likelihood at step 2: -20983.756
+Current log-likelihood at step 3: -20914.373
+Current log-likelihood at step 4: -20879.390
+Current log-likelihood at step 5: -20858.809
+Current log-likelihood at step 6: -20846.273
+Current log-likelihood at step 7: -20834.841
+Current log-likelihood at step 8: -20825.278
+Current log-likelihood at step 9: -20817.112
+Current log-likelihood at step 10: -20811.044
+Current log-likelihood at step 11: -20805.125
+Current log-likelihood at step 12: -20798.558
+Current log-likelihood at step 13: -20775.582
+Current log-likelihood at step 14: -20770.922
+Current log-likelihood at step 15: -20766.443
+Current log-likelihood at step 16: -20762.416
+Current log-likelihood at step 17: -20759.862
+Current log-likelihood at step 18: -20758.790
+Current log-likelihood at step 19: -20758.376
+Current log-likelihood at step 20: -20758.242
+Current log-likelihood at step 21: -20758.193
+Partition-specific rates:  1.587 0.191 0.534
+Parameters optimization took 20 rounds (1.455 sec)
+
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 2.748 second
+Computing log-likelihood of 99 initial trees ... 0.919 seconds
+Current best score: -20743.315
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -20734.719
+Current log-likelihood at step 1: -20734.676
+Parameters optimization took 0 rounds (0.025 sec)
+
+BETTER TREE FOUND at iteration 1: -20734.676
+Iteration 10 / LogL: -20734.703 / Time: 0h:0m:5s
+Iteration 20 / LogL: -20738.248 / Time: 0h:0m:6s
+Finish initializing candidate tree set (2)
+Current best tree score: -20734.676 / CPU time: 4.699
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -20734.679 / Time: 0h:0m:7s (0h:0m:17s left)
+Iteration 40 / LogL: -20737.459 / Time: 0h:0m:7s (0h:0m:11s left)
+Iteration 50 / LogL: -20734.677 / Time: 0h:0m:8s (0h:0m:8s left)
+Iteration 60 / LogL: -20734.745 / Time: 0h:0m:8s (0h:0m:6s left)
+Iteration 70 / LogL: -20734.679 / Time: 0h:0m:9s (0h:0m:4s left)
+Iteration 80 / LogL: -20734.745 / Time: 0h:0m:9s (0h:0m:2s left)
+Iteration 90 / LogL: -20736.823 / Time: 0h:0m:10s (0h:0m:1s left)
+Iteration 100 / LogL: -20736.816 / Time: 0h:0m:10s (0h:0m:0s left)
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:10s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -20734.675
+Current log-likelihood at step 1: -20734.668
+Partition-specific rates:  1.588 0.189 0.535
+Parameters optimization took 0 rounds (0.023 sec)
+
+BEST SCORE FOUND : -20734.668
+Total tree length: 3.144
+
+Total number of iterations: 102
+CPU time used for tree search: 8.887 sec (0h:0m:8s)
+Wall-clock time used for tree search: 9.221 sec (0h:0m:9s)
+Total CPU time used: 10.395 sec (0h:0m:10s)
+Total wall-clock time used: 11.001 sec (0h:0m:11s)
+
+Analysis results written to: 
+  IQ-TREE report:                I_all.iqtree
+  Maximum-likelihood tree:       I_all.treefile
+  Best partitioning scheme:      I_all.best_scheme.nex
+           in RAxML format:      I_all.best_scheme
+  Screen log file:               I_all.log
+
+Date and Time: Wed Jul 19 13:45:25 2023

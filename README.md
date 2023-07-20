@@ -6,10 +6,17 @@ The R script _sand_dollar_phylogeny.R_ can reproduce all steps of the analysis. 
 
 # References
 Chasalow S. 2012. combinat: combinatorics utilities. R package version 0.0-8. <https://CRAN.R-project.org/package=combinat>.
+
 Goloboff P.A. & Catalano S.A. 2016. TNT version 1.5, including a full implementation of phylogenetic morphometrics. Cladistics 32: 221-238.
+
 Katoh K. & Standley D.M. 2013. MAFFT multiple sequence alignment software version 7: improvements in performance and usability. Molecular Biology and Evolution, 30: 772-780.
+
 Mills B.R. 2022. MetBrewer: Color Palettes Inspired by Works at the Metropolitan Museum of Art. R package version 0.2.0. <https://CRAN.R-project.org/package=MetBrewer>.
+
 Nguyen L.-T., Schmidt H.A., von Haeseler A., Minh B.Q. 2015. IQ-TREE: A fast and effective stochastic algorithm for estimating maximum likelihood phylogenies. Molecular Biology and Evolution, 32: 268-274.
+
 Paradis E. & Schliep K. 2019. ape 5.0: an environment for modern phylogenetics and evolutionary analyses in R. Bioinformatics, 35: 526-528.
+
 Schliep K. 2011. phangorn: phylogenetic analysis in R. Bioinformatics, 27: 592-593.
+
 Wickham H., Averick M., Bryan J., Chang W., McGowan L.D., et al. (2019). Welcome to the tidyverse. Journal of Open Source Software, 4: 1686.

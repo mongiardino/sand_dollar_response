@@ -1,10 +1,10 @@
-# sand_dollar_response
+# Embrancing the taxonomic and topological stability of phylogenomics
 ## Intro
 This repository contains the data and results supporting the manuscript Mongiardino Koch (2023) _Sci. Rep._
 
 The R script _sand_dollar_phylogeny.R_ can reproduce all steps of the analysis. It relies on R functions from packages _ape_ (Paradis & Schliep 2019), _phangorn_ (Schliep 2011), _tidyverse_ (Wickham et al. 2019), _combinat_ (Chasalow 2012), and _MetBrewer_ (Mills 2012). Analyses also relied on MAFFT v7.505 (Katoh & Standley 2013) for multiple sequence alignment, IQ-TREE v1.6.12 (Nguyen et al. 2015) for model selection and maximum likelihood inference, and TNT v1.5 (Goloboff & Catalano 2016) for morphological inference under maximum parsimony.
 
-# References
+## References
 Chasalow S. 2012. combinat: combinatorics utilities. R package version 0.0-8. <https://CRAN.R-project.org/package=combinat>.
 
 Goloboff P.A. & Catalano S.A. 2016. TNT version 1.5, including a full implementation of phylogenetic morphometrics. Cladistics 32: 221-238.

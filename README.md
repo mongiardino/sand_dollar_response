@@ -1,7 +1,5 @@
 # Embrancing the taxonomic and topological stability of phylogenomics
 ## Intro
-This repository contains the data and results supporting the manuscript Mongiardino Koch (2023) _Sci. Rep._
-
 The R script _sand_dollar_phylogeny.R_ can reproduce all steps of the analysis. It relies on R functions from packages _ape_ (Paradis & Schliep 2019), _phangorn_ (Schliep 2011), _tidyverse_ (Wickham et al. 2019), _combinat_ (Chasalow 2012), and _MetBrewer_ (Mills 2012). Analyses also relied on MAFFT v7.505 (Katoh & Standley 2013) for multiple sequence alignment, IQ-TREE v1.6.12 (Nguyen et al. 2015) for model selection and maximum likelihood inference, and TNT v1.5 (Goloboff & Catalano 2016) for morphological inference under maximum parsimony.
 
 ## References
